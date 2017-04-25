@@ -5,7 +5,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">SB Admin</a>
+    <a class="navbar-brand" href="index.html">Stock Manager</a>
 </div>
 <!-- Top Menu Items -->
 <ul class="nav navbar-right top-nav">
@@ -15,9 +15,9 @@
             <li class="message-preview">
                 <a href="#">
                     <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
+                        <span class="pull-left">
+                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                        </span>
                         <div class="media-body">
                             <h5 class="media-heading"><strong>John Smith</strong>
                             </h5>
