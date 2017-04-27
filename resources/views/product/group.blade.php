@@ -24,13 +24,21 @@
     <div class="row">
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_list">
-<h1>Group name list</h1>
+                <h1>Group name list</h1>
             </div>
             <!-- /.product_group_name -->
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_form">
                 <h1>add goup name</h1>
+				{!! Form::open(['url' => '/add-product-group','class'=>'form-inline']) !!}
+				{!!  Form::token() !!}
+				<div class="form-group">
+					{!! Form::text('name',$value = null, $attributes = ['class'=>'form-control']) !!}
+				</div>
+
+				{!! Form::submit('Submit!', $attributes = ['class'=>'btn btn-default']) !!}
+				{!! Form::close() !!}
 
             </div>
             <!-- /.product_group_name_form -->

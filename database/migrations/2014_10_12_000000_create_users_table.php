@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        DB::unprepared('CREATE PROCEDURE test() BEGIN SELECT * FROM user; END');
     }
 
     /**
