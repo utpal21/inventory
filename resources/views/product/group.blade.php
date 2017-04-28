@@ -25,20 +25,38 @@
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_list">
                 <h1>Group name list</h1>
+				<table class="table">
+					<body>
+						<tr><td>Group Name</td></tr>
+					</body>
+				</table>
+				<!-- /.table -->
             </div>
             <!-- /.product_group_name -->
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_form">
-                <h1>add goup name</h1>
 				{!! Form::open(['url' => '/add-product-group','class'=>'form-inline']) !!}
-				{!!  Form::token() !!}
-				<div class="form-group">
-					{!! Form::text('name',$value = null, $attributes = ['class'=>'form-control']) !!}
-				</div>
+               <div class="form_title col-lg-6">
+				   <h1>Group Name</h1>
+			   </div>
+               <div class="form_active col-lg-6">
+				   <div class="form-group">
+				   {!! Form::checkbox('isset', '1',true) !!}
+					   {!! Form::label('Active', null, ['class' => 'control-label']) !!}
+					   </div>
+			   </div>
+               <!-- /.form_title -->
+				<div class="col-lg-12">
+					<div class="form-group">
+						{!! Form::text('name',$value = null, $attributes = ['class'=>'form-control']) !!}
+					</div>
 
-				{!! Form::submit('Submit!', $attributes = ['class'=>'btn btn-default']) !!}
-				{!! Form::close() !!}
+					{!! Form::submit('Submit!', $attributes = ['class'=>'btn btn-default']) !!}
+					{!! Form::close() !!}
+				</div>
+				<!-- /.col-lg-12 -->
+
 
             </div>
             <!-- /.product_group_name_form -->

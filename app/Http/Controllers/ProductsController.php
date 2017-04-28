@@ -16,7 +16,7 @@ class ProductsController extends Controller
 	}
 	/*Save Product Group*/
 	public function store_product_group(Request $request){
-		//dd($request->all());
-		return view('product.group');
+		dd($request->all());
+		//return view('product.group');
 	}
 }
