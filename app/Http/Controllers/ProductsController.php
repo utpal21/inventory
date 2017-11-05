@@ -18,8 +18,10 @@ class ProductsController extends Controller
 	/*Save Product Group*/
 	public function store_product_group(Request $request){
     $name = $request->input('name');
+    $active = $request->input('isset');
+    $date = '05/11/2017';
     //dd($name);
-		$test = DB::select("CALL inv_p_product_label(?,?)",['',$name]);
+		$test = DB::select("CALL inv_p_product_label(?,?,?)",[$name,$active,$date]);
 		dd($test);
 		//return view('product.group');
 	}
