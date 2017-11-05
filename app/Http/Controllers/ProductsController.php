@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class ProductsController extends Controller
@@ -16,7 +17,10 @@ class ProductsController extends Controller
 	}
 	/*Save Product Group*/
 	public function store_product_group(Request $request){
-		dd($request->all());
+    $name = $request->input('name');
+    //dd($name);
+		$test = DB::select("CALL inv_p_product_label(?,?)",['',$name]);
+		dd($test);
 		//return view('product.group');
 	}
 }
