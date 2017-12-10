@@ -13,14 +13,16 @@ class CreateProductUnitTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_unit', function (Blueprint $table) {
-            $table->increments('p_unit_id');
-            $table->string('p_unit_name');
-            $table->boolean('is_active');
-            $table->string('cr_by');
-            $table->string('up_by');
-            $table->timestamps();
-        });
+      Schema::create('inv_product_unit', function (Blueprint $table) {
+          $table->increments('p_unit_id', 20);
+          $table->string('p_unit_name', 200);
+          $table->boolean('is_active');
+          $table->string('cr_by');
+          $table->timestamp('cr_date')->nullable();
+          $table->string('up_by', 50)->nullable();
+          $table->timestamp('up_date')->nullable();
+          $table->timestamps();
+      });
     }
 
     /**
@@ -30,6 +32,6 @@ class CreateProductUnitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_unit');
+        Schema::dropIfExists('inv_product_unit');
     }
 }

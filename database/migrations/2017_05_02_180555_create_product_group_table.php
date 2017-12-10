@@ -13,14 +13,17 @@ class CreateProductGroupTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_group', function (Blueprint $table) {
-            $table->increments('p_group_id');
-            $table->string('p_group_name');
+        Schema::create('inv_product_group', function (Blueprint $table) {
+            $table->increments('p_group_id', 20);
+            $table->string('p_group_name', 200);
             $table->boolean('is_active');
             $table->string('cr_by');
-            $table->string('up_by');
+            $table->timestamp('cr_date')->nullable();
+            $table->string('up_by', 50)->nullable();
+            $table->timestamp('up_date')->nullable();
             $table->timestamps();
         });
+
     }
 
     /**
@@ -30,6 +33,6 @@ class CreateProductGroupTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_group');
+        Schema::dropIfExists('inv_product_group');
     }
 }

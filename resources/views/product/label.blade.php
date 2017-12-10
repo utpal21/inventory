@@ -5,29 +5,19 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Product Group <small>Add Product</small>
+                Product Label <small>Add Product</small>
             </h1>
         </div>
     </div>
     <!-- /.row -->
 
-   <!-- <div class="row">
-        <div class="col-lg-12">
-            <div class="alert alert-info alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!
-            </div>
-        </div>
-    </div>-->
-    <!-- /.row -->
-
     <div class="row">
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_list">
-                <h1>Group name list</h1>
+                <h1>Label name list</h1>
 				<table class="table">
 					<body>
-						<tr><td>Group Name</td></tr>
+						<tr><td>Label Name</td></tr>
 					</body>
 				</table>
 				<!-- /.table -->
@@ -36,9 +26,9 @@
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_form">
-				{!! Form::open(['url' => '/add-product-group','class'=>'form-inline']) !!}
+				{!! Form::open(['url' => '/add-product-label','class'=>'form-inline']) !!}
                <div class="form_title col-lg-6">
-				   <h1>Group Name</h1>
+				   <h1>Label Name</h1>
 			   </div>
                <div class="form_active col-lg-6">
 				   <div class="form-group">

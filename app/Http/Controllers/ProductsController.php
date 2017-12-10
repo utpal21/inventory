@@ -12,17 +12,16 @@ class ProductsController extends Controller
 	    return view('product.index');
     }
 	/*Product Group*/
-	public function product_group(){
-		return view('product.group');
+	public function product_label(){
+		return view('product.label');
 	}
 	/*Save Product Group*/
-	public function store_product_group(Request $request){
+	public function store_product_label(Request $request){
     $name = $request->input('name');
     $active = $request->input('isset');
-    $date = '05/11/2017';
-    //dd($name);
-		$test = DB::select("CALL inv_p_product_label(?,?,?)",[$name,$active,$date]);
-		dd($test);
-		//return view('product.group');
+    $cr_by = 'utpal';
+    $data = DB::select('CALL inv_iu_product_label(?,?,?,?)',['',$name, $active,$cr_by]);
+		//dd($data);
+		return view('product.label');
 	}
 }
