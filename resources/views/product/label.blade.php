@@ -14,9 +14,10 @@
     <div class="row">
         <div class="col-lg-6 col-md-6">
             <div class="product_group_name_list">
-                <h1>Label name list</h1>
-				<table class="table">
+                <h1>Label list</h1>
+				<table id="label" class="table">
 					<body>
+						<tr><td>Label Name</td></tr>
 						<tr><td>Label Name</td></tr>
 					</body>
 				</table>

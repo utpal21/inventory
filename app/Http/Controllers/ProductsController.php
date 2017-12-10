@@ -13,6 +13,8 @@ class ProductsController extends Controller
     }
 	/*Product Group*/
 	public function product_label(){
+    $data = DB::select('CALL 	inv_p_product_label(?,?)',['','']);
+    dd($data);
 		return view('product.label');
 	}
 	/*Save Product Group*/
