@@ -17,8 +17,9 @@
                 <h1>Label list</h1>
 				<table id="label" class="table">
 					<body>
-						<tr><td>Label Name</td></tr>
-						<tr><td>Label Name</td></tr>
+            <?php if(!empty($data)){ foreach($data as $row){ ?>
+						<tr><td id="<?php echo $row->p_label_id; ?>"><?php echo $row->p_label_name; ?></td></tr>
+          <?php } } ?>
 					</body>
 				</table>
 				<!-- /.table -->
