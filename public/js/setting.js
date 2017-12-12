@@ -5,6 +5,6 @@ $(document).ready(function(){
     var winHeight = $(window).height();
     $("#page-wrapper").css('min-height', winHeight-70 );
     //data table initial
-     $('#label').DataTable();
+     $('#labell').DataTable();
 
 });
