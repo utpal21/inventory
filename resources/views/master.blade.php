@@ -24,6 +24,7 @@
     <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     {{--Custom Style--}}
     <link href="/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 

@@ -22,7 +22,8 @@ class ProductsController extends Controller
     $active = $request->input('isset');
     $cr_by = 'utpal';
     $data = DB::select('CALL inv_iu_product_label(?,?,?,?)',['',$name, $active,$cr_by]);
-		//dd($data);		
+		//dd($data);
     return redirect('/product-label');
+    //return response()->json($post);
 	}
 }
