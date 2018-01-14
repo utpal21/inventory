@@ -18,12 +18,11 @@ class ProductsController extends Controller
 	}
 	/*Save Product Group*/
 	public function store_product_label(Request $request){
-    $name = $request->input('name');
-    $active = $request->input('isset');
+    $name = $request->name;
+    $active = $request->isset;
+    if(empty($name) || empty($active)) return response()->json(['error'=>'Invalid paramiter']);
     $cr_by = 'utpal';
-    $data = DB::select('CALL inv_iu_product_label(?,?,?,?)',['',$name, $active,$cr_by]);
-		//dd($data);
-    return redirect('/product-label');
-    //return response()->json($post);
+    $data = DB::select('CALL inv_iu_product_label(?,?,?,?)',['',$name, $active,$cr_by]);		
+    return response()->json($data);
 	}
 }

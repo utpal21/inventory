@@ -65,7 +65,7 @@
             <div class="modal-body">
               <div class="col-lg-12 col-md-12">
                   <div class="">
-      				{!! Form::open(['url' => '/add-product-label','class'=>'form-inline']) !!}
+      				{!! Form::open(['url' => '/add-product-label','class'=>'form-inline label-entry']) !!}
                      <div class="form_active col-lg-12">
             				   <div class="form-group">
               				   {!! Form::checkbox('isset', '1',true) !!}

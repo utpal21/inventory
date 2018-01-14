@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_token" content="{!! csrf_token() !!}" />
 
     <title>Stock Manager</title>
 
@@ -24,7 +25,8 @@
     <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     {{--Custom Style--}}
     <link href="/css/dataTables.bootstrap4.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <!-- toastr notifications -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 
@@ -38,7 +40,7 @@
 </head>
 
 <body>
-
+<?php var_dump($test); ?>
 <div id="wrapper">
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
